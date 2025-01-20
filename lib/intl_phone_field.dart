@@ -404,7 +404,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
       magnifierConfiguration: widget.magnifierConfiguration,
       decoration: widget.decoration.copyWith(
         prefixIcon: _buildFlagsButton(),
-        counterText: widget.showCounter?(!widget.enabled ? '' : null): null,
+        counterText: !widget.enabled ||!widget.showCounter? '' : null,
       ),
       style: widget.style,
       onSaved: (value) {
@@ -475,11 +475,11 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
                 ],
                 if (widget.showCountryFlag) ...[
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(4),
+                    borderRadius: BorderRadius.circular(2),
                     child: Image.asset(
                       'assets/flags/${_selectedCountry.code.toLowerCase()}.png',
                       package: 'intl_phone_field',
-                      width: 30,
+                      width: 32,
                     ),
                   ),
                   // kIsWeb
