@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
 void main() {
@@ -20,9 +20,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Phone Field Example'),
-        ),
+        appBar: AppBar(title: Text('Phone Field Example')),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Form(
@@ -34,32 +32,22 @@ class _MyAppState extends State<MyApp> {
                 TextField(
                   decoration: InputDecoration(
                     labelText: 'Name',
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(),
-                    ),
+                    border: OutlineInputBorder(borderSide: BorderSide()),
                   ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 TextField(
                   decoration: InputDecoration(
                     labelText: 'Email',
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(),
-                    ),
+                    border: OutlineInputBorder(borderSide: BorderSide()),
                   ),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 IntlPhoneField(
                   focusNode: focusNode,
                   decoration: InputDecoration(
                     labelText: 'Phone Number',
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(),
-                    ),
+                    border: OutlineInputBorder(borderSide: BorderSide()),
                   ),
                   languageCode: "en",
                   onChanged: (phone) {
@@ -69,9 +57,7 @@ class _MyAppState extends State<MyApp> {
                     print('Country changed to: ' + country.name);
                   },
                 ),
-                SizedBox(
-                  height: 10,
-                ),
+                SizedBox(height: 10),
                 MaterialButton(
                   child: Text('Submit'),
                   color: Theme.of(context).primaryColor,

@@ -1,3 +1,9 @@
+## [4.0.0] - Release
+
+- **Breaking** Migrates Material widgets from `package:flutter/material.dart` to `package:material_ui/material_ui.dart`.
+- Updates the minimum supported SDK version to Flutter 3.47 / Dart 3.12.
+- Migrates the example Android app to AGP 9 and built-in Kotlin (compileSdk 36).
+
 ## [3.3.0] - Release
 
 - Add `magnifierConfiguration` to customize the magnifier.
